@@ -71,22 +71,22 @@ namespace Master2
         //Private methods.
         private string laptopDetails()
         {
-            String output = "SOURCE: \r\nORDER#: \r\nTRACKING#: \r\n\r\nCHARGER: \r\nISSUES: \r\n\r\nCONDITION: \r\nSN: " +
-                WMICTool.getSerialNumber() + "\r\nCOLOR: \r\n\r\n" +
-                WMICTool.getManufacturer() + ", " + WMICTool.getModelName() + ", [SCREEN SIZE], " + WMICTool.getResolutionDetails() + 
-                ", " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() +", " + WMICTool.getDiskDetails() +
-                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nREF MODEL: " + WMICTool.getModelName() + "\r\n\r\nBOX: \r\nUNPLUG TEST: \r\nACTION: ";
+            String output = "ORDER ID: \r\nTRACKING NUMBER: \r\nREASON: N/A \r\n\r\nCHARGER: N/A \r\nISSUES: NO \r\nUNPLUG TEST: N/A \r\nWARRANTY: " +
+                 "\r\n\r\nCOLOR: \r\nBOX: \r\n\r\n" +
+                WMICTool.getManufacturer() + ", " + WMICTool.getModelName() + ", [SCREEN SIZE?], " + WMICTool.getResolutionDetails() + 
+                ", [TOUCH?], " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() +", " + WMICTool.getDiskDetails() +
+                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: "  + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: NON-GREEN-DOT";
 
             return output;
         }
 
         private string pcDetails()
         {
-            String output = "SOURCE: \r\nORDER#: \r\nTRACKING#: \r\n\r\nCHARGER: \r\nISSUES: \r\n\r\nCONDITION: \r\nSN: " +
-                WMICTool.getSerialNumber() + "\r\nCOLOR: \r\n\r\n" +
-                WMICTool.getManufacturer() + ", " + WMICTool.getModelName() +
-                ", [SCREEN SIZE], " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() + ", " + WMICTool.getDiskDetails() +
-                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nREF MODEL: " + WMICTool.getModelName() + "\r\n\r\nBOX: \r\nUNPLUG TEST: \r\nACTION: ";
+            String output = "ORDER ID: \r\nTRACKING NUMBER: \r\nREASON: N/A \r\n\r\nCHARGER: N/A \r\nISSUES: NO \r\nUNPLUG TEST: N/A \r\nWARRANTY: " +
+                 "\r\n\r\nCOLOR: \r\nBOX: \r\n\r\n" +
+                WMICTool.getManufacturer() + ", " + WMICTool.getModelName() + ", " +
+                ", " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() + ", " + WMICTool.getDiskDetails() +
+                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: NON-GREEN-DOT";
 
             return output;
         }

@@ -96,7 +96,7 @@
             this.txtDetails.Name = "txtDetails";
             this.txtDetails.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDetails.Size = new System.Drawing.Size(997, 315);
+            this.txtDetails.Size = new System.Drawing.Size(997, 353);
             this.txtDetails.TabIndex = 17;
             // 
             // lblActivation
@@ -113,9 +113,9 @@
             // 
             // picDetails
             // 
-            this.picDetails.Location = new System.Drawing.Point(512, 473);
+            this.picDetails.Location = new System.Drawing.Point(512, 488);
             this.picDetails.Name = "picDetails";
-            this.picDetails.Size = new System.Drawing.Size(515, 455);
+            this.picDetails.Size = new System.Drawing.Size(515, 440);
             this.picDetails.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDetails.TabIndex = 24;
             this.picDetails.TabStop = false;
@@ -135,7 +135,7 @@
             this.lblSerialNumber.AutoSize = true;
             this.lblSerialNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSerialNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSerialNumber.Location = new System.Drawing.Point(153, 433);
+            this.lblSerialNumber.Location = new System.Drawing.Point(153, 453);
             this.lblSerialNumber.Name = "lblSerialNumber";
             this.lblSerialNumber.Size = new System.Drawing.Size(208, 32);
             this.lblSerialNumber.TabIndex = 26;
@@ -145,7 +145,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(751, 433);
+            this.label3.Location = new System.Drawing.Point(751, 460);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 27;
@@ -180,7 +180,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 443);
+            this.label1.Location = new System.Drawing.Point(26, 463);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 20);
             this.label1.TabIndex = 28;
@@ -189,7 +189,7 @@
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(12, 932);
+            this.lblVersion.Location = new System.Drawing.Point(12, 920);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(119, 20);
             this.lblVersion.TabIndex = 29;
