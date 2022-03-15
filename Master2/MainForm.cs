@@ -131,7 +131,7 @@ namespace Master2
 
         private void lblActivation_Click(object sender, EventArgs e)
         {
-
+            checkActivation();
         }
 
         private void lblVersion_Click(object sender, EventArgs e)
