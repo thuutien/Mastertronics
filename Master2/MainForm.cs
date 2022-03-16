@@ -84,7 +84,7 @@ namespace Master2
         {
             String output = "ORDER ID: \r\nTRACKING NUMBER: \r\nREASON: N/A \r\n\r\nCHARGER: N/A \r\nISSUES: NO \r\nUNPLUG TEST: N/A \r\nWARRANTY: " +
                  "\r\n\r\nCOLOR: \r\nBOX: \r\n\r\n" +
-                WMICTool.getManufacturer() + ", " + WMICTool.getModelName() + ", " +
+                WMICTool.getManufacturer() + ", " + WMICTool.getModelName() +
                 ", " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() + ", " + WMICTool.getDiskDetails() +
                  WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: NON-GREEN-DOT";
 
