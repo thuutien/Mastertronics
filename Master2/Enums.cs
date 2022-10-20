@@ -9,11 +9,4 @@ namespace Master2
       
     }
 
-    enum Windows
-    {
-        TenHome,
-        TenPro,
-        ElevenHome,
-        ElevenPro,
-    }
 }
