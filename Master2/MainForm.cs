@@ -2,15 +2,16 @@
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Drawing;
+using System.Management.Automation;
 
 namespace Master2
 {
     public partial class MainForm : Form
     {
-        
+        //string serverIP = "";
         public MainForm()
         {
-            
+
             InitializeComponent();
             checkActivation();
             genrateCodeImages();
@@ -33,22 +34,22 @@ namespace Master2
 
         private void btnSysprep_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 Process.Start(@"C:\Windows\sysnative\Sysprep\sysprep.exe");
-            } catch 
+            } catch
             {
                 MessageBox.Show("Please run application as Administrator");
             }
-            
+
         }
 
 
         private void btnReactivate_Click(object sender, EventArgs e)
         {
-            WMICTool.reactivate();  
+            WMICTool.reactivate();
         }
-       
+
 
         private void btnLaptop_Click(object sender, EventArgs e)
         {
@@ -73,9 +74,9 @@ namespace Master2
         {
             String output = "ORDER ID: \r\nTRACKING NUMBER: \r\nREASON: N/A \r\n\r\nCHARGER: N/A \r\nISSUES: NO \r\nUNPLUG TEST: N/A \r\nWARRANTY: " +
                  "\r\n\r\nCOLOR: \r\nBOX: \r\n\r\n" +
-                WMICTool.getManufacturer() + ", " + WMICTool.getModelName() + ", [SCREEN SIZE?], " + WMICTool.getResolutionDetails() + 
-                ", [TOUCH?], " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() +", " + WMICTool.getDiskDetails() +
-                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: "  + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: NON-GREEN-DOT";
+                WMICTool.getManufacturer() + ", " + WMICTool.getModelName() + ", [SCREEN SIZE?], " + WMICTool.getResolutionDetails() +
+                ", [TOUCH?], " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() + ", " + WMICTool.getDiskDetails() +
+                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: NON-GREEN-DOT";
 
             return output;
         }
@@ -143,5 +144,84 @@ namespace Master2
         {
             genrateCodeImages();
         }
+
+        private void btn_taskmngr_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(@"C:\WINDOWS\system32\taskmgr.exe");
+            }
+            catch
+            {
+                MessageBox.Show("Please run application as Administrator");
+            }
+        }
+
+        private void btn_devicemgnr_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(@"C:\WINDOWS\system32\devmgmt.msc");
+            }
+            catch
+            {
+                MessageBox.Show("Please run application as Administrator");
+            }
+        }
+
+        private void disk_mgmt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(@"C:\WINDOWS\system32\diskmgmt.msc");
+            }
+            catch
+            {
+                MessageBox.Show("Please run application as Administrator");
+            }
+
+        }
+
+        private void btn_dxdiag_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(@"C:\WINDOWS\system32\dxdiag.exe");
+            }
+            catch
+            {
+                MessageBox.Show("Please run application as Administrator");
+            }
+
+        }
+
+        private void btn_upload_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            String manufacturer = WMICTool.getManufacturer();
+            String model = WMICTool.getModelName();
+            string directory = "'Z:\\" + manufacturer + "\\" + model + "'";
+            Console.WriteLine(directory);
+
+            string script = @"$secPassword = ConvertTo-SecureString ""G00dm@stertronic"" -AsPlainText -Force
+$cred = new-object -typename System.Management.Automation.PSCredential -argumentlist Administrator, $secPassword
+New-PSDrive -Name Z -PSProvider FileSystem -Root \\192.168.128.2\drivers$ -Credential $cred -Persist";
+
+
+            PowerShell ps = PowerShell.Create();
+            
+            ps.AddScript(script);
+            ps.Invoke();
+            ps.AddScript(@"New-Item -Path " + directory + " -ItemType Directory");
+            ps.Invoke();
+            ps.AddScript("dism /online /export-driver /destination:" + directory);
+            ps.Invoke();
+            ps.AddScript("net use Z: /delete");
+            ps.Invoke();
+            Cursor.Current = Cursors.Default;
+            MessageBox.Show("Export completed!");
+        }
+
+   
     }
 }

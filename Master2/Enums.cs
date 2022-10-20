@@ -8,4 +8,12 @@ namespace Master2
         Licensed
       
     }
+
+    enum Windows
+    {
+        TenHome,
+        TenPro,
+        ElevenHome,
+        ElevenPro,
+    }
 }
