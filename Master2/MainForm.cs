@@ -222,6 +222,17 @@ New-PSDrive -Name Z -PSProvider FileSystem -Root \\192.168.128.2\drivers$ -Crede
             MessageBox.Show("Export completed!");
         }
 
-   
+        private void btn_cmd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(@"C:\WINDOWS\system32\cmd.exe");
+            }
+            catch
+            {
+                MessageBox.Show("Please run application as Administrator");
+            }
+
+        }
     }
 }

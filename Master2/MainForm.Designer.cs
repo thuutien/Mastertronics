@@ -50,6 +50,7 @@
             this.btn_upload = new System.Windows.Forms.Button();
             this.disk_mgmt = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_cmd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSerial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
@@ -240,7 +241,7 @@
             // btn_upload
             // 
             this.btn_upload.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_upload.Location = new System.Drawing.Point(842, 328);
+            this.btn_upload.Location = new System.Drawing.Point(842, 390);
             this.btn_upload.Name = "btn_upload";
             this.btn_upload.Size = new System.Drawing.Size(160, 33);
             this.btn_upload.TabIndex = 33;
@@ -269,6 +270,16 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "Diagnostic Tools";
             // 
+            // btn_cmd
+            // 
+            this.btn_cmd.Location = new System.Drawing.Point(843, 255);
+            this.btn_cmd.Name = "btn_cmd";
+            this.btn_cmd.Size = new System.Drawing.Size(160, 33);
+            this.btn_cmd.TabIndex = 41;
+            this.btn_cmd.Text = "CMD";
+            this.btn_cmd.UseVisualStyleBackColor = true;
+            this.btn_cmd.Click += new System.EventHandler(this.btn_cmd_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -277,6 +288,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1014, 769);
+            this.Controls.Add(this.btn_cmd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.disk_mgmt);
             this.Controls.Add(this.btn_upload);
@@ -333,6 +345,7 @@
         private System.Windows.Forms.Button btn_upload;
         private System.Windows.Forms.Button disk_mgmt;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_cmd;
     }
 }
 
