@@ -88,7 +88,10 @@ namespace Master2
                     vertical = wmi.GetPropertyValue("CurrentVerticalResolution").ToString();
                     horizontal = wmi.GetPropertyValue("CurrentHorizontalResolution").ToString();
                 }
-                catch { }
+                catch {
+                    Console.WriteLine("Cannot get resolutions.");
+                }
+
                 if(vertical != "" && horizontal != "")
                 {
                     break;

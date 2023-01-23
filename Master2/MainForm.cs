@@ -76,7 +76,7 @@ namespace Master2
                  "\r\n\r\nCOLOR: \r\nBOX: \r\n\r\n" +
                 WMICTool.getManufacturer() + ", " + WMICTool.getModelName() + ", [SCREEN SIZE?], " + WMICTool.getResolutionDetails() +
                 ", [TOUCH?], " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() + ", " + WMICTool.getDiskDetails() +
-                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: NON-GREEN-DOT";
+                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: SMILELY-FACE";
 
             return output;
         }
@@ -87,7 +87,7 @@ namespace Master2
                  "\r\n\r\nCOLOR: \r\nBOX: \r\n\r\n" +
                 WMICTool.getManufacturer() + ", " + WMICTool.getModelName() +
                 ", " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() + ", " + WMICTool.getDiskDetails() +
-                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: NON-GREEN-DOT";
+                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: SMILELY-FACE";
 
             return output;
         }
@@ -107,6 +107,8 @@ namespace Master2
                 lblActivation.Text = "WINDOWS IS NOT ACTIVATED";
                 //run activate
             }
+
+            Console.WriteLine("Checked: " + lblActivation.Text);
 
         }
 
@@ -232,6 +234,11 @@ New-PSDrive -Name Z -PSProvider FileSystem -Root \\192.168.128.2\drivers$ -Crede
             {
                 MessageBox.Show("Please run application as Administrator");
             }
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

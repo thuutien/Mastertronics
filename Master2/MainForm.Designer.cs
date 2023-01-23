@@ -201,7 +201,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(92, 17);
             this.lblVersion.TabIndex = 29;
-            this.lblVersion.Text = "Version 2.0.0";
+            this.lblVersion.Text = "Version 2.1.0";
             this.lblVersion.Click += new System.EventHandler(this.lblVersion_Click);
             // 
             // eventLog1
@@ -314,6 +314,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Mastertronics";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSerial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
