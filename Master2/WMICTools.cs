@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Management;
+using System.Management.Automation;
 using System.Windows;
 
 namespace Master2
@@ -217,7 +218,35 @@ namespace Master2
             return disks;
         }
 
-      
+        public static void preventSleep(bool preventSleep)
+        {
+            PowerShell ps = PowerShell.Create();
+            if (preventSleep)
+            {
+                string script = @"powercfg.exe -x -monitor-timeout-ac 80
+powercfg.exe -x -disk-timeout-ac 80
+powercfg.exe -x -standby-timeout-ac 80
+powercfg.exe -x -hibernate-timeout-ac 80";
+
+                ps.AddScript(script);
+                ps.Invoke();
+                ps.Dispose();
+            }
+            else
+            {
+                string script = @"powercfg.exe -x -monitor-timeout-ac 5
+powercfg.exe -x -disk-timeout-ac 10
+powercfg.exe -x -standby-timeout-ac 5
+powercfg.exe -x -hibernate-timeout-ac 10";
+
+                ps.AddScript(script);
+                ps.Invoke();
+                ps.Dispose();
+
+            }
+        }
+
+
         public static LicenseStatus getActivationDetails()
         {
             string status = "";

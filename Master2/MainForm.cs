@@ -18,6 +18,15 @@ namespace Master2
             txtDetails.Text = laptopDetails();
             lblSerialNumber.Text = WMICTool.getSerialNumber();
             genrateCodeImages();
+            WMICTool.preventSleep(true);
+            AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
+
+        }
+
+        static void OnProcessExit(object sender, EventArgs e)
+        {
+            WMICTool.preventSleep(false);
+            
         }
 
 
@@ -76,7 +85,7 @@ namespace Master2
                  "\r\n\r\nCOLOR: \r\nBOX: \r\n\r\n" +
                 WMICTool.getManufacturer() + ", " + WMICTool.getModelName() + ", [SCREEN SIZE?], " + WMICTool.getResolutionDetails() +
                 ", [TOUCH?], " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() + ", " + WMICTool.getDiskDetails() +
-                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: SMILELY-FACE";
+                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: SMILEY-FACE";
 
             return output;
         }
@@ -87,7 +96,7 @@ namespace Master2
                  "\r\n\r\nCOLOR: \r\nBOX: \r\n\r\n" +
                 WMICTool.getManufacturer() + ", " + WMICTool.getModelName() +
                 ", " + WMICTool.getCPUDetails() + ", " + WMICTool.getRAMDetails() + ", " + WMICTool.getDiskDetails() +
-                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: SMILELY-FACE";
+                 WMICTool.getGraphicCardDetails() + " " + WMICTool.getOSDetails() + "\r\n\r\nSKU: " + "\r\nLOCATION: \r\n\r\nN/A \r\n\r\n1. SN: " + WMICTool.getSerialNumber() + "\r\n\r\nNOTE: SMILEY-FACE";
 
             return output;
         }
@@ -222,6 +231,7 @@ New-PSDrive -Name Z -PSProvider FileSystem -Root \\192.168.128.2\drivers$ -Crede
             ps.Invoke();
             Cursor.Current = Cursors.Default;
             MessageBox.Show("Export completed!");
+            ps.Dispose();
         }
 
         private void btn_cmd_Click(object sender, EventArgs e)
@@ -237,9 +247,15 @@ New-PSDrive -Name Z -PSProvider FileSystem -Root \\192.168.128.2\drivers$ -Crede
 
         }
 
+
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_enabeSleep_Click(object sender, EventArgs e)
+        {
+            WMICTool.preventSleep(false);
         }
     }
 }

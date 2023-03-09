@@ -51,6 +51,7 @@
             this.disk_mgmt = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_cmd = new System.Windows.Forms.Button();
+            this.btn_enabeSleep = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSerial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
@@ -201,7 +202,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(92, 17);
             this.lblVersion.TabIndex = 29;
-            this.lblVersion.Text = "Version 2.1.0";
+            this.lblVersion.Text = "Version 2.3.2";
             this.lblVersion.Click += new System.EventHandler(this.lblVersion_Click);
             // 
             // eventLog1
@@ -280,6 +281,16 @@
             this.btn_cmd.UseVisualStyleBackColor = true;
             this.btn_cmd.Click += new System.EventHandler(this.btn_cmd_Click);
             // 
+            // btn_enabeSleep
+            // 
+            this.btn_enabeSleep.Location = new System.Drawing.Point(843, 295);
+            this.btn_enabeSleep.Name = "btn_enabeSleep";
+            this.btn_enabeSleep.Size = new System.Drawing.Size(160, 31);
+            this.btn_enabeSleep.TabIndex = 42;
+            this.btn_enabeSleep.Text = "Enable Sleep";
+            this.btn_enabeSleep.UseVisualStyleBackColor = true;
+            this.btn_enabeSleep.Click += new System.EventHandler(this.btn_enabeSleep_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -288,6 +299,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1014, 769);
+            this.Controls.Add(this.btn_enabeSleep);
             this.Controls.Add(this.btn_cmd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.disk_mgmt);
@@ -347,6 +359,7 @@
         private System.Windows.Forms.Button disk_mgmt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_cmd;
+        private System.Windows.Forms.Button btn_enabeSleep;
     }
 }
 
