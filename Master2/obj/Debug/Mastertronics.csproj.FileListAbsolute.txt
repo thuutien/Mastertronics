@@ -39,8 +39,6 @@ C:\Users\Mastertronics\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mas
 C:\Users\Mastertronics\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.exe
 C:\Users\Mastertronics\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.pdb
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\bin\Debug\Mastertronics.exe.config
-C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\bin\Debug\Mastertronics.exe.manifest
-C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\bin\Debug\Mastertronics.application
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\bin\Debug\Mastertronics.exe
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\bin\Debug\Mastertronics.pdb
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\bin\Debug\QRCoder.dll
@@ -53,9 +51,6 @@ C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Master2.Mai
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.Properties.Resources.resources
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.csproj.GenerateResource.cache
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.csproj.CoreCompileInputs.cache
-C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.TrustInfo.xml
-C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.exe.manifest
-C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.application
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.csproj.CopyComplete
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.exe
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Debug\Mastertronics.pdb

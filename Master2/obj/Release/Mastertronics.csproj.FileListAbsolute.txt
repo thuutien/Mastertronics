@@ -54,8 +54,3 @@ C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Release\Mastertro
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Release\Mastertronics.csproj.CopyComplete
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Release\Mastertronics.exe
 C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Release\Mastertronics.pdb
-C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\bin\Release\Mastertronics.exe.manifest
-C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\bin\Release\Mastertronics.application
-C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Release\Mastertronics.TrustInfo.xml
-C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Release\Mastertronics.exe.manifest
-C:\Users\henry\Source\Repos\thuutien\Mastertronics\Master2\obj\Release\Mastertronics.application

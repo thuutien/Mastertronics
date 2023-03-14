@@ -18,14 +18,13 @@ namespace Master2
             txtDetails.Text = laptopDetails();
             lblSerialNumber.Text = WMICTool.getSerialNumber();
             genrateCodeImages();
-            WMICTool.preventSleep(true);
+            WMICTool.preventSleep();
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
 
         }
 
         static void OnProcessExit(object sender, EventArgs e)
         {
-            WMICTool.preventSleep(false);
             
         }
 
@@ -33,11 +32,17 @@ namespace Master2
         // Buttons
         private void btnQuickTest_Click(object sender, EventArgs e)
         {
-            Process.Start("cmd.exe", "/C start msedge /new http://en.key-test.ru/");
-            Process.Start("cmd.exe", "/C start msedge /new https://lcdtech.info/en/tests/dead.pixel.htm");
-            Process.Start("cmd.exe", "/C start msedge /new https://www.youtube.com/watch?v=QEjgPh4SEmU");
-            Process.Start("cmd.exe", "/C start microsoft.windows.camera:");
-            Process.Start("cmd.exe", "/C devmgmt.msc");
+            PowerShell ps = PowerShell.Create();
+            string script = @"start microsoft-edge:https://www.youtube.com/watch?v=KpsJWFuVTdI
+start microsoft-edge:https://key-test.com/
+start microsoft-edge:https://lcdtech.info/en/tests/dead.pixel.htm
+start microsoft.windows.camera:
+start devmgmt.msc";
+
+            ps.AddScript(script);
+            ps.Invoke();
+            ps.Dispose();
+
 
         }
 
@@ -255,7 +260,6 @@ New-PSDrive -Name Z -PSProvider FileSystem -Root \\192.168.128.2\drivers$ -Crede
 
         private void btn_enabeSleep_Click(object sender, EventArgs e)
         {
-            WMICTool.preventSleep(false);
         }
     }
 }
