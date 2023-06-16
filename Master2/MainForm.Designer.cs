@@ -51,6 +51,8 @@
             this.disk_mgmt = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_cmd = new System.Windows.Forms.Button();
+            this.btn_wactivation = new System.Windows.Forms.Button();
+            this.btn_wupdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSerial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
@@ -201,7 +203,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(92, 17);
             this.lblVersion.TabIndex = 29;
-            this.lblVersion.Text = "Version 2.4.1";
+            this.lblVersion.Text = "Version 2.4.5";
             this.lblVersion.Click += new System.EventHandler(this.lblVersion_Click);
             // 
             // eventLog1
@@ -241,7 +243,8 @@
             // btn_upload
             // 
             this.btn_upload.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_upload.Location = new System.Drawing.Point(842, 390);
+            this.btn_upload.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btn_upload.Location = new System.Drawing.Point(843, 683);
             this.btn_upload.Name = "btn_upload";
             this.btn_upload.Size = new System.Drawing.Size(160, 33);
             this.btn_upload.TabIndex = 33;
@@ -280,6 +283,28 @@
             this.btn_cmd.UseVisualStyleBackColor = true;
             this.btn_cmd.Click += new System.EventHandler(this.btn_cmd_Click);
             // 
+            // btn_wactivation
+            // 
+            this.btn_wactivation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_wactivation.Location = new System.Drawing.Point(843, 303);
+            this.btn_wactivation.Name = "btn_wactivation";
+            this.btn_wactivation.Size = new System.Drawing.Size(160, 33);
+            this.btn_wactivation.TabIndex = 42;
+            this.btn_wactivation.Text = "Activation Setting";
+            this.btn_wactivation.UseVisualStyleBackColor = true;
+            this.btn_wactivation.Click += new System.EventHandler(this.btn_wactivation_Click);
+            // 
+            // btn_wupdate
+            // 
+            this.btn_wupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_wupdate.Location = new System.Drawing.Point(842, 354);
+            this.btn_wupdate.Name = "btn_wupdate";
+            this.btn_wupdate.Size = new System.Drawing.Size(160, 33);
+            this.btn_wupdate.TabIndex = 43;
+            this.btn_wupdate.Text = "Windows Update";
+            this.btn_wupdate.UseVisualStyleBackColor = true;
+            this.btn_wupdate.Click += new System.EventHandler(this.btn_wupdate_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -288,6 +313,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1014, 769);
+            this.Controls.Add(this.btn_wupdate);
+            this.Controls.Add(this.btn_wactivation);
             this.Controls.Add(this.btn_cmd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.disk_mgmt);
@@ -347,6 +374,8 @@
         private System.Windows.Forms.Button disk_mgmt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_cmd;
+        private System.Windows.Forms.Button btn_wupdate;
+        private System.Windows.Forms.Button btn_wactivation;
     }
 }
 

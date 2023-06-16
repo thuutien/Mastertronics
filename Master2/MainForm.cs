@@ -261,5 +261,23 @@ New-PSDrive -Name Z -PSProvider FileSystem -Root \\192.168.128.2\drivers$ -Crede
         private void btn_enabeSleep_Click(object sender, EventArgs e)
         {
         }
+
+        private void btn_wactivation_Click(object sender, EventArgs e)
+        {
+            PowerShell ps = PowerShell.Create();
+            ps.AddScript(@"start ms-settings:activation");
+            ps.Invoke();
+            ps.Dispose();
+
+        }
+
+        private void btn_wupdate_Click(object sender, EventArgs e)
+        {
+            PowerShell ps = PowerShell.Create();
+            ps.AddScript(@"start ms-settings:windowsupdate");
+            ps.Invoke();
+            ps.Dispose();
+
+        }
     }
 }
